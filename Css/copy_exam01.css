@@ -1,0 +1,127 @@
+@font-face {
+    src: url("../font/BMJUA_ttf.ttf");
+    font-family: "jua"
+}
+
+* {
+    font-family: "jua";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+strong {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: block;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* 노말라이즈  */
+/* 라이브러리 시작 */
+.ab {
+    height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.re {
+    position: relative;
+}
+
+/* 라이브러리 끝 */
+/* 커스텀 시작 */
+.row-box {
+    display: flex;
+    max-width: 1200px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 50px auto;
+}
+
+.row-box > .part01 {
+    flex-grow: 1;
+}
+
+.row-box > .part02 {
+    flex-grow: 1;
+}
+
+.row-box > .part03 {
+    flex-grow: 1;
+}
+
+.row-box > .part01 > .left {}
+
+.row-box > .part02 > .center {}
+
+.row-box > .part03 > .right {}
+
+/* 이미지 들어가 있는 곳 */
+
+.row-box > .part01 > .left > .img-box {
+    margin: 10px;
+}
+
+.row-box > .part02 > .center > .img-box {
+    margin: 10px;
+}
+
+.row-box > .part03 > .right > .img-box {
+    margin: 10px;
+}
+
+/* 텍스트 라이브러리 */
+.small-img-text {
+    display: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+.big-img-text {
+    color: #fff;
+    font-size: 12px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 후버 기능 구현 */
+.img-box {
+    transition: all 1s;
+}
+
+.img-box:hover {
+    background-image: url(https://i.ibb.co/HCgsyVn/14-1.jpg);
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.img-box:hover > .small-img-text {
+    transition: all 3s;
+    display: block;
+}
+
+.img-box:hover > .big-img-text {
+    display: flex;
+    transition: all 4s;
+}
